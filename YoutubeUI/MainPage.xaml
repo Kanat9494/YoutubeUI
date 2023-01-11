@@ -3,16 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="YoutubeUI.MainPage">
     <ScrollView>
-        <Grid 
-            ColumnDefinitions="Auto, *"
-            HeightRequest="80">
-            <HorizontalStackLayout Grid.Column="0">
-                <Image
-                    Source="youtube_green_second.png"
-                    Aspect="AspectFill"
-                    HeightRequest="40"
-                    WidthRequest="60"/>
-            </HorizontalStackLayout>
+        <Grid RowDefinitions="Auto, Auto, *">
+            <Grid 
+                Grid.Row="0"
+                ColumnDefinitions="Auto, *"
+                HeightRequest="80"
+                Padding="10">
+                <HorizontalStackLayout 
+                    Grid.Column="0"
+                    Spacing="10">
+                    <Image
+                        Source="youtube_green_second.png"
+                        Aspect="AspectFill"
+                        HeightRequest="40"
+                        WidthRequest="60"/>
+
+                    <Label 
+                        Text="YouTube"    
+                        FontAttributes="Bold"
+                        FontSize="40" 
+                        VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Spacing="10">
+                    <ImageButton
+                        Source="notification_bell.svg"
+                        HeightRequest="40"
+                        WidthRequest="30"/>
+
+                    <ImageButton
+                        Source="search.svg"
+                        HeightRequest="40"
+                        WidthRequest="30"/>
+
+                    <ImageButton
+                        Source="user.svg"
+                        HeightRequest="40"
+                        WidthRequest="30"/>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Border 
+                Grid.Row="1"
+                StrokeShape="Rectangle"
+                StrokeThickness="1"
+                Padding="10">
+                <ScrollView
+                    Orientation="Horizontal">
+                    <HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Image
+                                Source="explore_icon.png"
+                                Aspect="AspectFill"
+                                HeightRequest="20"
+                                WidthRequest="30"/>
+                        </HorizontalStackLayout>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Border>
         </Grid>
     </ScrollView>
 </ContentPage>

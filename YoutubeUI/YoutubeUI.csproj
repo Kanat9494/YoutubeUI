@@ -51,10 +51,14 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\bell_regular.svg" />
 	  <None Remove="Resources\Images\bell_slash_solid.svg" />
+	  <None Remove="Resources\Images\explore_icon.png" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\library.png" />
+	  <None Remove="Resources\Images\search.svg" />
 	  <None Remove="Resources\Images\shorts.svg" />
+	  <None Remove="Resources\Images\subscriptions.png" />
 	  <None Remove="Resources\Images\subscriptions.svg" />
+	  <None Remove="Resources\Images\user.svg" />
 	  <None Remove="Resources\Images\youtube_green.png" />
 	  <None Remove="Resources\Images\youtube_green_second.png" />
 	  <None Remove="Resources\Images\youtube_logo.svg" />

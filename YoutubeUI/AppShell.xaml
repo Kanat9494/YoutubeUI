@@ -19,7 +19,7 @@
 
         <ShellContent 
             Title="Подписки"
-            Icon="subscriptions.svg"
+            Icon="subscriptions.png"
             ContentTemplate="{DataTemplate local:MainPage}"/>
 
         <ShellContent 
