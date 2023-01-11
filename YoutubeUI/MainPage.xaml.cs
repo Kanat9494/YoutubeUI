@@ -5,7 +5,13 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+
+        Tags = new ObservableCollection<Tag>(GetTags());
+
+        BindingContext = this;
 	}
+
+    public ObservableCollection<Tag> Tags { get; set; }
 
     private static IEnumerable<Tag> GetTags() =>
         new List<Tag>()

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:YoutubeUI"
+             x:DataType="app:MainPage"
              x:Class="YoutubeUI.MainPage">
     <ScrollView>
         <Grid RowDefinitions="Auto, Auto, *">
@@ -48,6 +50,7 @@
 
             <Border 
                 Grid.Row="1"
+                Stroke="LightGray"
                 StrokeShape="Rectangle"
                 StrokeThickness="1"
                 Padding="10">
@@ -63,6 +66,30 @@
                                 HeightRequest="20"
                                 WidthRequest="30"/>
                         </HorizontalStackLayout>
+
+                        <CollectionView 
+                            ItemsSource="{Binding Tags}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout
+                                    Orientation="Horizontal"/>
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate 
+                                    x:DataType="app:Tag">
+                                    <Border
+                                        Stroke="LightGray"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 10"
+                                        Margin="5, 0, 5, 0"
+                                        BackgroundColor="#323232">
+                                        <Label
+                                            Text="{Binding Name}"
+                                            Padding="10"/>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
                     </HorizontalStackLayout>
                 </ScrollView>
             </Border>
