@@ -34,17 +34,21 @@
                     <ImageButton
                         Source="notification_bell.svg"
                         HeightRequest="40"
-                        WidthRequest="30"/>
+                        WidthRequest="30"
+                        IsEnabled="True"
+                        />
 
                     <ImageButton
                         Source="search.svg"
                         HeightRequest="40"
-                        WidthRequest="30"/>
+                        WidthRequest="30"
+                        IsEnabled="True"/>
 
                     <ImageButton
                         Source="user.svg"
                         HeightRequest="40"
-                        WidthRequest="30"/>
+                        WidthRequest="30"
+                        IsEnabled="True"/>
                 </HorizontalStackLayout>
             </Grid>
 
